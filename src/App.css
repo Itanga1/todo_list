@@ -1,0 +1,125 @@
+.app h1 {
+  text-align: center;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.8);
+}
+.app {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+}
+.app .inputContainer {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.app .inputContainer > button {
+  width: 150px;
+  padding: 10px 0px;
+  font-size: large;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+.app .inputContainer > input {
+  width: 300px;
+  border-radius: 20px;
+  border: 2px solid dodgerblue;
+  padding: 10px;
+}
+
+.app .inputContainer > input:focus {
+  outline: 1px solid dodgerblue;
+}
+.app .todosContainer > div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+}
+.app .todosContainer > div p {
+  padding: 5px 10px;
+  font-size: medium;
+  border: 1px solid gray;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
+  border-radius: 20px;
+  text-wrap: wrap;
+}
+.app .todosContainer {
+  width: 50vw;
+  text-align: left;
+}
+.app .todosContainer > div > input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.app .todosContainer > div button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid dodgerblue;
+  font-weight: bold;
+}
+.app .todosContainer > div button:hover {
+  background-color: red;
+  color: white;
+  border: none;
+}
+.app .todosContainer {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  max-height: calc(100vh - 250px);
+  margin-bottom: 20px;
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+.app h1 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.app .inputContainer {
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+  background-color: white;
+}
+.app .todosContainer > div p.completed {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+}
+.app .todosContainer > div p.uncompleted {
+  background-color: white;
+  color: black;
+}
+.footer {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  bottom: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .app .todosContainer {
+    width: 90vw;
+  }
+  .app .inputContainer {
+    width: 90vw;
+  }
+}
