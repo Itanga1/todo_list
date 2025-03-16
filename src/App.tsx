@@ -9,7 +9,10 @@ interface Todo {
 }
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>(JSON.parse(localStorage.getItem('todos')) || []);
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : [];
+});
   const [inputValue, setInputValue] = useState<string>('');
 
   const newTodo = (event: React.ChangeEvent<HTMLInputElement>) => {
