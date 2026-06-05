@@ -4,7 +4,7 @@ This is a daily todo_list web app. It has the options to add, delete and highlig
 
 ## Live Demo
 
-[View Live Demo](https://todo-list-23hxctesv-itanga-benignes-projects.vercel.app/)
+[View Live Demo](https://todo-list-neon-two-47.vercel.app/)
 
 ## Technologies Used
 
